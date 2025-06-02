@@ -3,7 +3,7 @@ from app.models import Team, Player
 
 app = create_app()
 
-@app.before_first_request
+@app.before_request
 def setup():
     db.drop_all()
     db.create_all()
